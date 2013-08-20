@@ -1,0 +1,305 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		29726F0817C360EC00C464AC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29726F0717C360EC00C464AC /* UIKit.framework */; };
+		29726F0A17C360EC00C464AC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29726F0917C360EC00C464AC /* Foundation.framework */; };
+		29726F0C17C360EC00C464AC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29726F0B17C360EC00C464AC /* CoreGraphics.framework */; };
+		29726F1217C360EC00C464AC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 29726F1017C360EC00C464AC /* InfoPlist.strings */; };
+		29726F1417C360EC00C464AC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29726F1317C360EC00C464AC /* main.m */; };
+		29726F1817C360EC00C464AC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 29726F1717C360EC00C464AC /* AppDelegate.m */; };
+		29726F1A17C360EC00C464AC /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 29726F1917C360EC00C464AC /* Default.png */; };
+		29726F1C17C360EC00C464AC /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 29726F1B17C360EC00C464AC /* Default@2x.png */; };
+		29726F1E17C360EC00C464AC /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 29726F1D17C360EC00C464AC /* Default-568h@2x.png */; };
+		29726F2117C360EC00C464AC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29726F2017C360EC00C464AC /* ViewController.m */; };
+		29726F2417C360EC00C464AC /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29726F2217C360EC00C464AC /* ViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		29726F0417C360EC00C464AC /* VenusIOSGatway.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VenusIOSGatway.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		29726F0717C360EC00C464AC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		29726F0917C360EC00C464AC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		29726F0B17C360EC00C464AC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		29726F0F17C360EC00C464AC /* VenusIOSGatway-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VenusIOSGatway-Info.plist"; sourceTree = "<group>"; };
+		29726F1117C360EC00C464AC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		29726F1317C360EC00C464AC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		29726F1517C360EC00C464AC /* VenusIOSGatway-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VenusIOSGatway-Prefix.pch"; sourceTree = "<group>"; };
+		29726F1617C360EC00C464AC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		29726F1717C360EC00C464AC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		29726F1917C360EC00C464AC /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		29726F1B17C360EC00C464AC /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		29726F1D17C360EC00C464AC /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		29726F1F17C360EC00C464AC /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		29726F2017C360EC00C464AC /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		29726F2317C360EC00C464AC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		29726F0117C360EC00C464AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29726F0817C360EC00C464AC /* UIKit.framework in Frameworks */,
+				29726F0A17C360EC00C464AC /* Foundation.framework in Frameworks */,
+				29726F0C17C360EC00C464AC /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		29726EFB17C360EC00C464AC = {
+			isa = PBXGroup;
+			children = (
+				29726F0D17C360EC00C464AC /* VenusIOSGatway */,
+				29726F0617C360EC00C464AC /* Frameworks */,
+				29726F0517C360EC00C464AC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		29726F0517C360EC00C464AC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				29726F0417C360EC00C464AC /* VenusIOSGatway.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29726F0617C360EC00C464AC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29726F0717C360EC00C464AC /* UIKit.framework */,
+				29726F0917C360EC00C464AC /* Foundation.framework */,
+				29726F0B17C360EC00C464AC /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		29726F0D17C360EC00C464AC /* VenusIOSGatway */ = {
+			isa = PBXGroup;
+			children = (
+				29726F1617C360EC00C464AC /* AppDelegate.h */,
+				29726F1717C360EC00C464AC /* AppDelegate.m */,
+				29726F1F17C360EC00C464AC /* ViewController.h */,
+				29726F2017C360EC00C464AC /* ViewController.m */,
+				29726F2217C360EC00C464AC /* ViewController.xib */,
+				29726F0E17C360EC00C464AC /* Supporting Files */,
+			);
+			path = VenusIOSGatway;
+			sourceTree = "<group>";
+		};
+		29726F0E17C360EC00C464AC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				29726F0F17C360EC00C464AC /* VenusIOSGatway-Info.plist */,
+				29726F1017C360EC00C464AC /* InfoPlist.strings */,
+				29726F1317C360EC00C464AC /* main.m */,
+				29726F1517C360EC00C464AC /* VenusIOSGatway-Prefix.pch */,
+				29726F1917C360EC00C464AC /* Default.png */,
+				29726F1B17C360EC00C464AC /* Default@2x.png */,
+				29726F1D17C360EC00C464AC /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		29726F0317C360EC00C464AC /* VenusIOSGatway */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 29726F2717C360EC00C464AC /* Build configuration list for PBXNativeTarget "VenusIOSGatway" */;
+			buildPhases = (
+				29726F0017C360EC00C464AC /* Sources */,
+				29726F0117C360EC00C464AC /* Frameworks */,
+				29726F0217C360EC00C464AC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VenusIOSGatway;
+			productName = VenusIOSGatway;
+			productReference = 29726F0417C360EC00C464AC /* VenusIOSGatway.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29726EFC17C360EC00C464AC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = leafit;
+			};
+			buildConfigurationList = 29726EFF17C360EC00C464AC /* Build configuration list for PBXProject "VenusIOSGatway" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 29726EFB17C360EC00C464AC;
+			productRefGroup = 29726F0517C360EC00C464AC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				29726F0317C360EC00C464AC /* VenusIOSGatway */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		29726F0217C360EC00C464AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29726F1217C360EC00C464AC /* InfoPlist.strings in Resources */,
+				29726F1A17C360EC00C464AC /* Default.png in Resources */,
+				29726F1C17C360EC00C464AC /* Default@2x.png in Resources */,
+				29726F1E17C360EC00C464AC /* Default-568h@2x.png in Resources */,
+				29726F2417C360EC00C464AC /* ViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		29726F0017C360EC00C464AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29726F1417C360EC00C464AC /* main.m in Sources */,
+				29726F1817C360EC00C464AC /* AppDelegate.m in Sources */,
+				29726F2117C360EC00C464AC /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		29726F1017C360EC00C464AC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				29726F1117C360EC00C464AC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		29726F2217C360EC00C464AC /* ViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				29726F2317C360EC00C464AC /* en */,
+			);
+			name = ViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		29726F2517C360EC00C464AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		29726F2617C360EC00C464AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		29726F2817C360EC00C464AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VenusIOSGatway/VenusIOSGatway-Prefix.pch";
+				INFOPLIST_FILE = "VenusIOSGatway/VenusIOSGatway-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		29726F2917C360EC00C464AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VenusIOSGatway/VenusIOSGatway-Prefix.pch";
+				INFOPLIST_FILE = "VenusIOSGatway/VenusIOSGatway-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		29726EFF17C360EC00C464AC /* Build configuration list for PBXProject "VenusIOSGatway" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				29726F2517C360EC00C464AC /* Debug */,
+				29726F2617C360EC00C464AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		29726F2717C360EC00C464AC /* Build configuration list for PBXNativeTarget "VenusIOSGatway" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				29726F2817C360EC00C464AC /* Debug */,
+				29726F2917C360EC00C464AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29726EFC17C360EC00C464AC /* Project object */;
+}
