@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2906420717C5EDD9002D5951 /* SendDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2906420617C5EDD8002D5951 /* SendDataViewController.m */; };
+		2906420A17C5EE9F002D5951 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2906420917C5EE9F002D5951 /* SettingsViewController.m */; };
+		2906420C17C5EF42002D5951 /* SendDataViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2906420B17C5EF42002D5951 /* SendDataViewController.xib */; };
+		2906420E17C5EF51002D5951 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2906420D17C5EF51002D5951 /* SettingsViewController.xib */; };
+		2906421517C5F192002D5951 /* display.png in Resources */ = {isa = PBXBuildFile; fileRef = 2906420F17C5F192002D5951 /* display.png */; };
+		2906421617C5F192002D5951 /* display@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2906421017C5F192002D5951 /* display@2x.png */; };
+		2906421717C5F192002D5951 /* send.png in Resources */ = {isa = PBXBuildFile; fileRef = 2906421117C5F192002D5951 /* send.png */; };
+		2906421817C5F192002D5951 /* send@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2906421217C5F192002D5951 /* send@2x.png */; };
+		2906421917C5F192002D5951 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 2906421317C5F192002D5951 /* settings.png */; };
+		2906421A17C5F192002D5951 /* settings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2906421417C5F192002D5951 /* settings@2x.png */; };
+		2906421D17C5F2C7002D5951 /* reload.png in Resources */ = {isa = PBXBuildFile; fileRef = 2906421B17C5F2C7002D5951 /* reload.png */; };
+		2906421E17C5F2C7002D5951 /* reload@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2906421C17C5F2C7002D5951 /* reload@2x.png */; };
 		29726F0817C360EC00C464AC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29726F0717C360EC00C464AC /* UIKit.framework */; };
 		29726F0A17C360EC00C464AC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29726F0917C360EC00C464AC /* Foundation.framework */; };
 		29726F0C17C360EC00C464AC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29726F0B17C360EC00C464AC /* CoreGraphics.framework */; };
@@ -16,11 +28,26 @@
 		29726F1A17C360EC00C464AC /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 29726F1917C360EC00C464AC /* Default.png */; };
 		29726F1C17C360EC00C464AC /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 29726F1B17C360EC00C464AC /* Default@2x.png */; };
 		29726F1E17C360EC00C464AC /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 29726F1D17C360EC00C464AC /* Default-568h@2x.png */; };
-		29726F2117C360EC00C464AC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29726F2017C360EC00C464AC /* ViewController.m */; };
-		29726F2417C360EC00C464AC /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29726F2217C360EC00C464AC /* ViewController.xib */; };
+		29726F2117C360EC00C464AC /* ScreenDisplayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29726F2017C360EC00C464AC /* ScreenDisplayViewController.m */; };
+		29726F2417C360EC00C464AC /* ScreenDisplayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29726F2217C360EC00C464AC /* ScreenDisplayViewController.xib */; };
+		29726F4A17C36A3900C464AC /* WCFService.m in Sources */ = {isa = PBXBuildFile; fileRef = 29726F4917C36A3900C464AC /* WCFService.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2906420517C5EDD8002D5951 /* SendDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendDataViewController.h; sourceTree = "<group>"; };
+		2906420617C5EDD8002D5951 /* SendDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendDataViewController.m; sourceTree = "<group>"; };
+		2906420817C5EE9F002D5951 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		2906420917C5EE9F002D5951 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		2906420B17C5EF42002D5951 /* SendDataViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SendDataViewController.xib; sourceTree = "<group>"; };
+		2906420D17C5EF51002D5951 /* SettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
+		2906420F17C5F192002D5951 /* display.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = display.png; sourceTree = "<group>"; };
+		2906421017C5F192002D5951 /* display@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "display@2x.png"; sourceTree = "<group>"; };
+		2906421117C5F192002D5951 /* send.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = send.png; sourceTree = "<group>"; };
+		2906421217C5F192002D5951 /* send@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "send@2x.png"; sourceTree = "<group>"; };
+		2906421317C5F192002D5951 /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
+		2906421417C5F192002D5951 /* settings@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings@2x.png"; sourceTree = "<group>"; };
+		2906421B17C5F2C7002D5951 /* reload.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reload.png; sourceTree = "<group>"; };
+		2906421C17C5F2C7002D5951 /* reload@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "reload@2x.png"; sourceTree = "<group>"; };
 		29726F0417C360EC00C464AC /* VenusIOSGatway.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VenusIOSGatway.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29726F0717C360EC00C464AC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		29726F0917C360EC00C464AC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -34,9 +61,12 @@
 		29726F1917C360EC00C464AC /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		29726F1B17C360EC00C464AC /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		29726F1D17C360EC00C464AC /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		29726F1F17C360EC00C464AC /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		29726F2017C360EC00C464AC /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		29726F2317C360EC00C464AC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		29726F1F17C360EC00C464AC /* ScreenDisplayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScreenDisplayViewController.h; sourceTree = "<group>"; };
+		29726F2017C360EC00C464AC /* ScreenDisplayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScreenDisplayViewController.m; sourceTree = "<group>"; };
+		29726F2317C360EC00C464AC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ScreenDisplayViewController.xib; sourceTree = "<group>"; };
+		29726F4817C36A3900C464AC /* WCFService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCFService.h; sourceTree = "<group>"; };
+		29726F4917C36A3900C464AC /* WCFService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCFService.m; sourceTree = "<group>"; };
+		29726F4B17C36A7E00C464AC /* WCFServiceDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WCFServiceDelegate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +83,63 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2906421F17C5F379002D5951 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				2906422017C5F38D002D5951 /* images */,
+			);
+			name = resources;
+			sourceTree = "<group>";
+		};
+		2906422017C5F38D002D5951 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				2906421B17C5F2C7002D5951 /* reload.png */,
+				2906421C17C5F2C7002D5951 /* reload@2x.png */,
+				2906420F17C5F192002D5951 /* display.png */,
+				2906421017C5F192002D5951 /* display@2x.png */,
+				2906421117C5F192002D5951 /* send.png */,
+				2906421217C5F192002D5951 /* send@2x.png */,
+				2906421317C5F192002D5951 /* settings.png */,
+				2906421417C5F192002D5951 /* settings@2x.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
+		2906422117C5F3A6002D5951 /* core */ = {
+			isa = PBXGroup;
+			children = (
+				29726F4717C369F400C464AC /* helpers */,
+			);
+			name = core;
+			sourceTree = "<group>";
+		};
+		2906422217C5F3B0002D5951 /* wcfservices */ = {
+			isa = PBXGroup;
+			children = (
+				29726F4817C36A3900C464AC /* WCFService.h */,
+				29726F4917C36A3900C464AC /* WCFService.m */,
+				29726F4B17C36A7E00C464AC /* WCFServiceDelegate.h */,
+			);
+			name = wcfservices;
+			sourceTree = "<group>";
+		};
+		2906422317C5F3CC002D5951 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				29726F1F17C360EC00C464AC /* ScreenDisplayViewController.h */,
+				29726F2017C360EC00C464AC /* ScreenDisplayViewController.m */,
+				29726F2217C360EC00C464AC /* ScreenDisplayViewController.xib */,
+				2906420517C5EDD8002D5951 /* SendDataViewController.h */,
+				2906420617C5EDD8002D5951 /* SendDataViewController.m */,
+				2906420817C5EE9F002D5951 /* SettingsViewController.h */,
+				2906420917C5EE9F002D5951 /* SettingsViewController.m */,
+				2906420B17C5EF42002D5951 /* SendDataViewController.xib */,
+				2906420D17C5EF51002D5951 /* SettingsViewController.xib */,
+			);
+			name = views;
+			sourceTree = "<group>";
+		};
 		29726EFB17C360EC00C464AC = {
 			isa = PBXGroup;
 			children = (
@@ -83,11 +170,11 @@
 		29726F0D17C360EC00C464AC /* VenusIOSGatway */ = {
 			isa = PBXGroup;
 			children = (
+				2906422317C5F3CC002D5951 /* views */,
+				2906422117C5F3A6002D5951 /* core */,
+				2906421F17C5F379002D5951 /* resources */,
 				29726F1617C360EC00C464AC /* AppDelegate.h */,
 				29726F1717C360EC00C464AC /* AppDelegate.m */,
-				29726F1F17C360EC00C464AC /* ViewController.h */,
-				29726F2017C360EC00C464AC /* ViewController.m */,
-				29726F2217C360EC00C464AC /* ViewController.xib */,
 				29726F0E17C360EC00C464AC /* Supporting Files */,
 			);
 			path = VenusIOSGatway;
@@ -105,6 +192,14 @@
 				29726F1D17C360EC00C464AC /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		29726F4717C369F400C464AC /* helpers */ = {
+			isa = PBXGroup;
+			children = (
+				2906422217C5F3B0002D5951 /* wcfservices */,
+			);
+			name = helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,7 +257,17 @@
 				29726F1A17C360EC00C464AC /* Default.png in Resources */,
 				29726F1C17C360EC00C464AC /* Default@2x.png in Resources */,
 				29726F1E17C360EC00C464AC /* Default-568h@2x.png in Resources */,
-				29726F2417C360EC00C464AC /* ViewController.xib in Resources */,
+				29726F2417C360EC00C464AC /* ScreenDisplayViewController.xib in Resources */,
+				2906420C17C5EF42002D5951 /* SendDataViewController.xib in Resources */,
+				2906420E17C5EF51002D5951 /* SettingsViewController.xib in Resources */,
+				2906421517C5F192002D5951 /* display.png in Resources */,
+				2906421617C5F192002D5951 /* display@2x.png in Resources */,
+				2906421717C5F192002D5951 /* send.png in Resources */,
+				2906421817C5F192002D5951 /* send@2x.png in Resources */,
+				2906421917C5F192002D5951 /* settings.png in Resources */,
+				2906421A17C5F192002D5951 /* settings@2x.png in Resources */,
+				2906421D17C5F2C7002D5951 /* reload.png in Resources */,
+				2906421E17C5F2C7002D5951 /* reload@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,7 +280,10 @@
 			files = (
 				29726F1417C360EC00C464AC /* main.m in Sources */,
 				29726F1817C360EC00C464AC /* AppDelegate.m in Sources */,
-				29726F2117C360EC00C464AC /* ViewController.m in Sources */,
+				29726F2117C360EC00C464AC /* ScreenDisplayViewController.m in Sources */,
+				29726F4A17C36A3900C464AC /* WCFService.m in Sources */,
+				2906420717C5EDD9002D5951 /* SendDataViewController.m in Sources */,
+				2906420A17C5EE9F002D5951 /* SettingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,12 +298,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		29726F2217C360EC00C464AC /* ViewController.xib */ = {
+		29726F2217C360EC00C464AC /* ScreenDisplayViewController.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				29726F2317C360EC00C464AC /* en */,
 			);
-			name = ViewController.xib;
+			name = ScreenDisplayViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -298,6 +406,7 @@
 				29726F2917C360EC00C464AC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

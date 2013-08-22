@@ -8,16 +8,21 @@
 
 #import "AppDelegate.h"
 
-#import "ViewController.h"
+#import "ScreenDisplayViewController.h"
+#import "SendDataViewController.h"
+#import "SettingsViewController.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-    self.viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
-    self.window.rootViewController = self.viewController;
+    UIViewController *screenDisplayViewController = [[ScreenDisplayViewController alloc] initWithNibName:@"ScreenDisplayViewController" bundle:nil];
+    UIViewController *sendDataViewController = [[SendDataViewController alloc] initWithNibName:@"SendDataViewController" bundle:nil];
+     UIViewController *settingsViewController = [[SettingsViewController alloc] initWithNibName:@"SettingsViewController" bundle:nil];
+    self.tabBarController = [[UITabBarController alloc] init];
+    self.tabBarController.viewControllers = @[screenDisplayViewController, sendDataViewController, settingsViewController];
+    self.window.rootViewController = self.tabBarController;
     [self.window makeKeyAndVisible];
     return YES;
 }
