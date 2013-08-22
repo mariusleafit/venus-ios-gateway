@@ -19,6 +19,8 @@
 		2906421A17C5F192002D5951 /* settings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2906421417C5F192002D5951 /* settings@2x.png */; };
 		2906421D17C5F2C7002D5951 /* reload.png in Resources */ = {isa = PBXBuildFile; fileRef = 2906421B17C5F2C7002D5951 /* reload.png */; };
 		2906421E17C5F2C7002D5951 /* reload@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2906421C17C5F2C7002D5951 /* reload@2x.png */; };
+		2906422617C5F5F9002D5951 /* GetDDSScreenWCFService.m in Sources */ = {isa = PBXBuildFile; fileRef = 2906422517C5F5F9002D5951 /* GetDDSScreenWCFService.m */; };
+		2906422D17C5F8F4002D5951 /* SendUserDataWCFService.m in Sources */ = {isa = PBXBuildFile; fileRef = 2906422C17C5F8F4002D5951 /* SendUserDataWCFService.m */; };
 		29726F0817C360EC00C464AC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29726F0717C360EC00C464AC /* UIKit.framework */; };
 		29726F0A17C360EC00C464AC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29726F0917C360EC00C464AC /* Foundation.framework */; };
 		29726F0C17C360EC00C464AC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29726F0B17C360EC00C464AC /* CoreGraphics.framework */; };
@@ -48,6 +50,10 @@
 		2906421417C5F192002D5951 /* settings@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings@2x.png"; sourceTree = "<group>"; };
 		2906421B17C5F2C7002D5951 /* reload.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reload.png; sourceTree = "<group>"; };
 		2906421C17C5F2C7002D5951 /* reload@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "reload@2x.png"; sourceTree = "<group>"; };
+		2906422417C5F5F9002D5951 /* GetDDSScreenWCFService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetDDSScreenWCFService.h; sourceTree = "<group>"; };
+		2906422517C5F5F9002D5951 /* GetDDSScreenWCFService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetDDSScreenWCFService.m; sourceTree = "<group>"; };
+		2906422B17C5F8F4002D5951 /* SendUserDataWCFService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendUserDataWCFService.h; sourceTree = "<group>"; };
+		2906422C17C5F8F4002D5951 /* SendUserDataWCFService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendUserDataWCFService.m; sourceTree = "<group>"; };
 		29726F0417C360EC00C464AC /* VenusIOSGatway.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VenusIOSGatway.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29726F0717C360EC00C464AC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		29726F0917C360EC00C464AC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -120,6 +126,10 @@
 				29726F4817C36A3900C464AC /* WCFService.h */,
 				29726F4917C36A3900C464AC /* WCFService.m */,
 				29726F4B17C36A7E00C464AC /* WCFServiceDelegate.h */,
+				2906422417C5F5F9002D5951 /* GetDDSScreenWCFService.h */,
+				2906422517C5F5F9002D5951 /* GetDDSScreenWCFService.m */,
+				2906422B17C5F8F4002D5951 /* SendUserDataWCFService.h */,
+				2906422C17C5F8F4002D5951 /* SendUserDataWCFService.m */,
 			);
 			name = wcfservices;
 			sourceTree = "<group>";
@@ -138,6 +148,13 @@
 				2906420D17C5EF51002D5951 /* SettingsViewController.xib */,
 			);
 			name = views;
+			sourceTree = "<group>";
+		};
+		2906422717C5F7DB002D5951 /* config */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = config;
 			sourceTree = "<group>";
 		};
 		29726EFB17C360EC00C464AC = {
@@ -170,6 +187,7 @@
 		29726F0D17C360EC00C464AC /* VenusIOSGatway */ = {
 			isa = PBXGroup;
 			children = (
+				2906422717C5F7DB002D5951 /* config */,
 				2906422317C5F3CC002D5951 /* views */,
 				2906422117C5F3A6002D5951 /* core */,
 				2906421F17C5F379002D5951 /* resources */,
@@ -284,6 +302,8 @@
 				29726F4A17C36A3900C464AC /* WCFService.m in Sources */,
 				2906420717C5EDD9002D5951 /* SendDataViewController.m in Sources */,
 				2906420A17C5EE9F002D5951 /* SettingsViewController.m in Sources */,
+				2906422617C5F5F9002D5951 /* GetDDSScreenWCFService.m in Sources */,
+				2906422D17C5F8F4002D5951 /* SendUserDataWCFService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

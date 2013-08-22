@@ -7,9 +7,10 @@
 //
 
 #import "SettingsViewController.h"
+#import "AppDelegate.h"
 
 @interface SettingsViewController ()
-
+@property (weak, nonatomic) AppDelegate *appDelegate;
 @end
 
 @implementation SettingsViewController
@@ -20,6 +21,8 @@
     if (self) {
         self.title = @"Settings";
         self.tabBarItem.image = [UIImage imageNamed:@"settings"];
+        
+        self.appDelegate = GetAppDelegate();
     }
     return self;
 }
@@ -27,7 +30,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+	self.txtHost.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning
@@ -35,5 +38,15 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+#pragma mark UITextFieldDelegate
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    
+    return YES;
+}
 
+
+- (IBAction)btnSave:(id)sender {
+    self.appDelegate.serviceHost = self.txtHost.text;
+}
 @end

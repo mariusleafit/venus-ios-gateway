@@ -7,10 +7,12 @@
 //
 
 #import "ScreenDisplayViewController.h"
-#import "WCFService.h"
+#import "GetDDSScreenWCFService.h"
+#import "AppDelegate.h"
 
 @interface ScreenDisplayViewController ()
-@property (nonatomic) WCFService *wcfService;
+@property (nonatomic) GetDDSScreenWCFService *wcfService;
+@property (weak, nonatomic) AppDelegate *appDelegate;
 @end
 
 @implementation ScreenDisplayViewController
@@ -22,6 +24,8 @@
     if (self) {
         self.title = @"Screen";
         self.tabBarItem.image = [UIImage imageNamed:@"display"];
+        
+        self.appDelegate = GetAppDelegate();
     }
     return self;
 }
@@ -29,9 +33,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	//load image
-    self.wcfService = [[WCFService alloc] initWithDelegate:self];
-    [self.wcfService start];
+	
+}
+
+-(void)viewWillAppear:(BOOL)animated {
+    //load image
+    [self sendImageRequest];
 }
 
 - (void)didReceiveMemoryWarning
@@ -41,19 +48,22 @@
 }
 
 - (IBAction)send:(id)sender {
-    self.wcfService = [[WCFService alloc] initWithDelegate:self];
-    [self.wcfService start];
+    [self sendImageRequest];
 }
 
-
+-(void) sendImageRequest {
+    NSString *urlString = [NSString stringWithFormat:@"https://%@/Services/GAT_ExternalUserAccess/IExternalUserAccessServices/GetDDSScreen",self.appDelegate.serviceHost];
+    self.wcfService = [[GetDDSScreenWCFService alloc] initWithDelegate:self andUrl:[NSURL URLWithString:urlString]];
+    [self.wcfService start];
+}
 
 -(void)wcfService:(WCFService *)wcfService finishedSuccessfully:(NSData *)data {
     [self.image setImage:[UIImage imageWithData:data]];
 }
 
 -(void)wcfService:(WCFService *)wcfService finishedWithError:(NSError *)error {
-    NSLog(@"Error");
-    
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Error" message: @"Unable to load image!" delegate: nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alert show];
 }
 
 @end

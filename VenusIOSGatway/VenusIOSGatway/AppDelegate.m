@@ -16,6 +16,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    self.serviceHost = @"172.16.0.209:9590";
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     UIViewController *screenDisplayViewController = [[ScreenDisplayViewController alloc] initWithNibName:@"ScreenDisplayViewController" bundle:nil];
     UIViewController *sendDataViewController = [[SendDataViewController alloc] initWithNibName:@"SendDataViewController" bundle:nil];

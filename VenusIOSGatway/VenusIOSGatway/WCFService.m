@@ -24,37 +24,6 @@
     return self;
 }
 
-+ (NSString*)base64forData:(NSData*)theData {
-    const uint8_t* input = (const uint8_t*)[theData bytes];
-    NSInteger length = [theData length];
-    
-    static char table[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
-    
-    NSMutableData* data = [NSMutableData dataWithLength:((length + 2) / 3) * 4];
-    uint8_t* output = (uint8_t*)data.mutableBytes;
-    
-    NSInteger i;
-    for (i=0; i < length; i += 3) {
-        NSInteger value = 0;
-        NSInteger j;
-        for (j = i; j < (i + 3); j++) {
-            value <<= 8;
-            
-            if (j < length) {
-                value |= (0xFF & input[j]);
-            }
-        }
-        
-        NSInteger theIndex = (i / 3) * 4;
-        output[theIndex + 0] =                    table[(value >> 18) & 0x3F];
-        output[theIndex + 1] =                    table[(value >> 12) & 0x3F];
-        output[theIndex + 2] = (i + 1) < length ? table[(value >> 6)  & 0x3F] : '=';
-        output[theIndex + 3] = (i + 2) < length ? table[(value >> 0)  & 0x3F] : '=';
-    }
-    
-    return [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding];
-}
-
 -(void)start {
     //download
     //NSURLRequest *request = [[NSURLRequest alloc] initWithURL:self.downloadUrl cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData timeoutInterval:[Constants DOWNLOADTIMEOUT]];
@@ -72,39 +41,9 @@
     NSString *authValue = [NSString stringWithFormat:@"%@", [WCFService base64forData:authData]];
     [request setValue:authValue forHTTPHeaderField:@"Authorization"];
     
-    //[request setValue:@"a:a" forHTTPHeaderField:@"Authorization"];
-    
-    
-    NSString *soapMessage = [NSString stringWithFormat:@"<soapenv:Envelope"
-                             "xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:ext=\"http://xmlns.leafit.ch/venus/externaluseraccess\">"
-                             "<soapenv:Header/>"
-                             "<soapenv:Body>"
-                             "<ext:GetDDSScreen/>"
-                             "</soapenv:Body>"
-                             "</soapenv:Envelope>"];
-    
-    /*NSString *soapMessage = [NSString stringWithFormat:@"<?xml version=\"1.0\" encoding=\"utf-8\"?>"
-                             "<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">"
-                             "<soap:Body>"
-                             "<ConvertTemp xmlns=\"http://www.webserviceX.NET/\">"
-                             "<Temperature>12</Temperature>"
-                             "<FromUnit>degreeCelsius</FromUnit>"
-                             "<ToUnit>degreeFahrenheit</ToUnit>"
-                             "</ConvertTemp>"
-                             "</soap:Body>"
-                             "</soap:Envelope>"];*/
-    /*NSString *messageLength = [NSString stringWithFormat:@"%d",[soapMessage length]];
-    
     [request setValue:messageLength forHTTPHeaderField:@"Content-Length"];
     [request setHTTPBody:[soapMessage dataUsingEncoding:NSUTF8StringEncoding]];*/
     
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"https://172.16.0.209:9590/Services/GAT_ExternalUserAccess/IExternalUserAccessServices/GetDDSScreen"]];
-    
-    
-    // Send an asyncronous request
-    NSURLConnection *connection = [[NSURLConnection alloc] initWithRequest:request delegate:self startImmediately:NO];
-    
-    [connection start];
 }
 
 #pragma mark - NSURLConnectionDelegate

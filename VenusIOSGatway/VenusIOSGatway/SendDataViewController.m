@@ -7,9 +7,12 @@
 //
 
 #import "SendDataViewController.h"
+#import "SendUserDataWCFService.h"
+#import "AppDelegate.h"
 
 @interface SendDataViewController ()
-
+@property (nonatomic) SendUserDataWCFService *wcfService;
+@property (weak, nonatomic) AppDelegate *appDelegate;
 @end
 
 @implementation SendDataViewController
@@ -20,6 +23,8 @@
     if (self) {
         self.title = @"Send";
         self.tabBarItem.image = [UIImage imageNamed:@"send"];
+        
+        self.appDelegate = GetAppDelegate();
     }
     return self;
 }
@@ -27,8 +32,16 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+	
+    //set textFieldDelegates
+    self.txtName.delegate = self;
+    self.txtAddress.delegate = self;
+    self.txtCity.delegate = self;
+    self.txtNPA.delegate = self;
+    self.txtPhone.delegate = self;
 }
+
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -36,4 +49,32 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+
+- (IBAction)sendData:(id)sender {
+    
+    NSString *urlString = [NSString stringWithFormat:@"https://%@/Services/GAT_ExternalUserAccess/IExternalUserAccessServices/SendUserData",self.appDelegate.serviceHost];
+    self.wcfService = [[SendUserDataWCFService alloc] initWithDelegate:self url:[NSURL URLWithString:urlString] name:self.txtName.text address:self.txtAddress.text city:self.txtCity.text npa:self.txtNPA.text phone:self.txtPhone.text];
+    [self.wcfService start];
+}
+
+#pragma mark UITextFieldDelegate
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    
+    return YES;
+}
+
+#pragma mark WCFServiceDelegate
+-(void)wcfService:(WCFService *)wcfService finishedSuccessfully:(NSData *)data {
+    if(data.length > 0) {
+        self.btnSend.titleLabel.textColor = [UIColor redColor];
+    } else {
+        self.btnSend.titleLabel.textColor = [UIColor greenColor];
+    }
+}
+
+-(void)wcfService:(WCFService *)wcfService finishedWithError:(NSError *)error {
+    self.btnSend.titleLabel.textColor = [UIColor redColor];
+}
 @end
