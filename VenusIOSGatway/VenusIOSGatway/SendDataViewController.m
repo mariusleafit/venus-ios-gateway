@@ -67,6 +67,7 @@
 
 #pragma mark WCFServiceDelegate
 -(void)wcfService:(WCFService *)wcfService finishedSuccessfully:(NSData *)data {
+    NSString *test = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
     if(data.length > 0) {
         self.btnSend.titleLabel.textColor = [UIColor redColor];
     } else {

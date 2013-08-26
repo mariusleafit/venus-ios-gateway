@@ -24,8 +24,16 @@
         self.name = pName;
         self.address = pAddress;
         self.city = pCity;
-        self.npa = pNPA;
-        self.phone = pPhone;
+        if(pNPA.length > 0) {
+            self.npa = pNPA;
+        } else {
+            self.npa = @"0";
+        }
+        if(pPhone.length > 0) {
+            self.phone = pPhone;
+        } else {
+            self.phone = @"0";
+        }
         self.url = pUrl;
     }
     return self;
@@ -34,10 +42,22 @@
 -(void)start {
     //concat url
     NSURL *requestUrl = nil;
-    NSString *urlString = [NSString stringWithFormat:@"%@?name=%@&address=%@&city=%@&npa=%@&phone=%@",[self.url absoluteString],self.name, self.address, self.city, self.npa, self.phone];
-    requestUrl = [NSURL URLWithString:urlString];
+    requestUrl = [NSURL URLWithString:[self.url absoluteString]];
+
     
-    NSURLRequest *request = [NSURLRequest requestWithURL:requestUrl cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData timeoutInterval:5];
+    
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
+    [request setCachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData];
+    [request setURL:requestUrl];
+    [request setHTTPMethod:@"PUT"];
+    [request setValue:@"application/xml; charset=utf-8" forHTTPHeaderField:@"Content-Type"];
+    
+    
+    NSString *payload = [NSString stringWithFormat:@"<ExternalUserAccessDetails xmlns=\"http://xmlns.leafit.ch/venus/externaluseraccess\"><address>%@</address><city>%@</city><name>%@</name><npa>%@</npa><phone>%@</phone></ExternalUserAccessDetails>",self.address,self.city,self.name,self.npa,self.phone];
+    
+   
+    [request setValue:[NSString stringWithFormat:@"%i",payload.length]  forHTTPHeaderField:@"Content-Length"];
+    [request setHTTPBody:[NSData dataWithBytes:[payload UTF8String] length:[payload length]]];
     
     // Send an asyncronous request
     NSURLConnection *connection = [[NSURLConnection alloc] initWithRequest:request delegate:self startImmediately:NO];

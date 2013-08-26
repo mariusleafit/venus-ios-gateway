@@ -10,6 +10,7 @@
 
 @interface SettingsViewController : UIViewController <UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *txtHost;
+@property (weak, nonatomic) IBOutlet UITextField *txtScreen;
 
 - (IBAction)btnSave:(id)sender;
 @end

@@ -13,5 +13,4 @@
 - (IBAction)send:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *reloadButton;
 @property (weak, nonatomic) IBOutlet UIImageView *image;
-
 @end

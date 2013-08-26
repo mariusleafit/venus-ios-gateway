@@ -54,6 +54,7 @@
     // Furthermore, this method is called each time there is a redirect so reinitializing it
     // also serves to clear it
     self.responseData = [[NSMutableData alloc] init];
+    
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {

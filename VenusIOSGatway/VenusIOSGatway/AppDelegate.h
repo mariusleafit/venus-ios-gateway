@@ -18,4 +18,6 @@
 
 @property (strong, nonatomic) NSString *serviceHost;
 
+@property (strong, nonatomic) NSString *ddsScreenHost;
+
 @end

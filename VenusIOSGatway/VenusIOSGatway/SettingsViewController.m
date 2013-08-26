@@ -31,6 +31,7 @@
 {
     [super viewDidLoad];
 	self.txtHost.delegate = self;
+    self.txtScreen.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning
@@ -48,5 +49,6 @@
 
 - (IBAction)btnSave:(id)sender {
     self.appDelegate.serviceHost = self.txtHost.text;
+    self.appDelegate.ddsScreenHost = self.txtScreen.text;
 }
 @end
